@@ -1,23 +1,27 @@
 <div class="container-fluid">
   <h2 class="text-center">Create a new Goal</h2>
   <hr>
-  <form>
-      <div class="form-group">
+  <form #quoteForm='ngForm'>
+    <div class="form-group">
 
-          <label for="name">Name</label>
-          <input type="text" required class="form-control" id="name">
+        <label for="name">Name</label>
+        <input type="text" required class="form-control" id="name" [(ngModel)]="newQuote.name" name="name">
 
-      </div>
-      <div class="form-group">
+<!-- Testing to see if we get any data -->
+        Display {{newQuote.name}}
+    </div>
+    <div class="form-group">
 
-          <label for="description">Description</label>
-          <textarea class="form-control" id="description" rows="4" required></textarea>
+        <label for="description">Description</label>
+        <textarea class="form-control" id="description" rows="4" required></textarea>
 
-      </div>
-      <div class="form-group">
-          <label for="complete">Completion</label>
-          <input type='date' id="complete" required>
+    </div>
+    <div class="form-group">
 
-      </div>
-  </form>
+        <label for="complete">Completion</label>
+        <input type='date' id="complete" required>
+
+    </div>
+    <button type="submit" class="btn btn-success">Add Quote</button>
+</form>
 </div>
