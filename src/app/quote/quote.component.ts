@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input,Output,EventEmitter} from '@angular/core';
 import { Quote } from '../quote';
 
 @Component({
@@ -8,13 +8,23 @@ import { Quote } from '../quote';
 })
 export class QuoteComponent implements OnInit {
   quotes:Quote [] = [
-    {id:1, name:'Make your life a masterpiece; imagine no limitations on what you can be, have or do.'},
-    {id:2, name:'The best way to get started is to Quit Talking and begin Doing'},
-    {id:3, name:'The pessimist sees difficulty in every opportunity. The optimist sees the opportunity in every difficulty.'},
-    {id:4, name:'Do not let yesterday take up too much of taday.'},
-    {id:4, name:'You learn more from failure than from success.Do not let it stop you. Failure builds Character.'},
+    new Quote(1, 'Make your life a masterpiece imagine no limitations on what you can be have or do.', 'Auther:Brian Tracy'),
+    new Quote(2, 'The best way to get started is to Quit Talking and begin Doing', 'Auther:Walt Disney'),
+    new Quote(3, 'The pessimist sees difficulty in every opportunity. The optimist sees the opportunity in every difficulty.', 'Auther: Winston CHurchill'),
+    new Quote(4,'Do not let yesterday take up too much of today.', 'Auther: Will Rogers'),
+    new Quote(5, 'You learn more from failure than from success.Do not let it stop you. Failure builds Character.', 'Auther: Unknow'),
 
   ];
+
+  toggleDetails(index: string | number){
+    this.quotes[index].showDescription = !this.quotes[index].showDescription;
+  }
+
+  completeGoal(isComplete: any, index: number){
+    if (isComplete) {
+      this.quotes.splice(index,1);
+    }
+  }
 
 
   constructor() { }
