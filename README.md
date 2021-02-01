@@ -1,6 +1,8 @@
 # Quotes
 ### This app is to help upvote and downvote the quotes and give details of the author.
 ### This project was generated with [Angular CLI](https://github.com/angular/angular-cli).
+### By Jackson Ikonya
+### https://github.com/Jackson-coder-arch/Quotes
 
 
 ## Description
@@ -21,5 +23,6 @@ Using angular was a challenge though with time its been easy and understandable.
 
 ## Licence
 
-###
+### Copyright (c) 2021 Jackson-coder-arch
+
 
