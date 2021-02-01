@@ -15,6 +15,14 @@ export class QuoteComponent implements OnInit {
     new Quote(5, 'You learn more from failure than from success.Do not let it stop you. Failure builds Character.', 'Author: Unknow',new Date(1987,4,7)),
 
   ];
+  upVote(index: any) {
+
+
+    this.quotes[index].upvote++;
+  }
+  downVote(index: any) {
+    this.quotes[index].downvote++;
+  }
 
   toggleDetails(index: any){
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
@@ -35,6 +43,20 @@ export class QuoteComponent implements OnInit {
       }
     }
   }
+  highestUpVote() {
+    let highestUpVoteQuote = new Quote(0, '', '',new Date());
+    for (let i = 0; i < this.quotes.length; i++) {
+      if (this.quotes[i].upvote > highestUpVoteQuote.upvote) {
+        highestUpVoteQuote = this.quotes[i];
+      }
+    }
+    if (highestUpVoteQuote.upvote > 0) {
+      return highestUpVoteQuote;
+    } else {
+      return;
+    }
+  }
+
 
 
 

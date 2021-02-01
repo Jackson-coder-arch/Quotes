@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core'
+import { Button } from 'protractor';
 
 import { Quote } from '../quote';
 
