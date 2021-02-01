@@ -1,6 +1,12 @@
-<p> {{quote!.description}}</p>
-<p>Date{{quote?.completeDate|dateCount}}</p>
+<div class="row">
+  <div class="col-md-5">
+      <div class="card">
 
-<button (click)= 'quoteComplete(true)'>Delete</button>
-<!-- <button (click)= 'quoteDelete(true)' class="btn btn-outline-danger">Delete Quote</button> -->
+          <p>Posted {{ quote!.description }}</p>
+          <p>Date{{quote?.completeDate|dateCount}}</p>
+          <p>This quote was last posted in {{quote?.completeDate|dateCount}} days</p>
 
+          <button (click)= 'quoteComplete(true)' class="btn btn-outline-danger">Delete Quote</button>
+      </div>
+  </div>
+</div>

@@ -8,14 +8,16 @@ import { QuoteComponent } from './quote/quote.component';
 import { QuoteDetailComponent } from './quote-detail/quote-detail.component';
 import { DateCountPipe } from './date-count.pipe';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
+import{from} from 'rxjs';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuoteComponent,
     QuoteDetailComponent,
+    QuoteFormComponent,
     DateCountPipe,
-    QuoteFormComponent
+    QuoteFormComponent,
   ],
   imports: [
     BrowserModule,

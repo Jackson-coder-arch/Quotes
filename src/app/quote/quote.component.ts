@@ -56,6 +56,12 @@ export class QuoteComponent implements OnInit {
       return;
     }
   }
+  addNewQUote(quote:any){
+    let quoteLength =this.quotes.length;
+    quote.id =quoteLength+1;
+    quote.dateposted = new Date(quote.dateposted)
+    this.quotes.push(quote)
+  }
 
 
 
