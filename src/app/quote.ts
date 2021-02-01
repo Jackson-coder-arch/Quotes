@@ -1,4 +1,4 @@
-// export class Quote {
-//   id!:number;
-//   name!:string;
-// }
+export class Quote {
+  id!:number;
+  name!:string;
+}
