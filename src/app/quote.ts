@@ -1,7 +1,4 @@
 export class Quote {
-  id!:number;
-  name!:string;
-  description!:string;
 
   upvote:number;
   downvote:number;
@@ -15,9 +12,3 @@ export class Quote {
 
 }
 
-export class Quote {
-  showDescription: boolean;
-  constructor(public id: number,public name: string,public description: string){
-    this.showDescription=false;
-  }
-}
