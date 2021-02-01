@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  quote ='Make your life a masterpiece; imagine no limitations on what you can be, have or do.'
+  quotes:string[];
   // quotes:Quote [] = [
   //   {id:1, name:'Make your life a masterpiece; imagine no limitations on what you can be, have or do.'},
   //   {id:2, name:'The best way to get started is to Quit Talking and begin Doing'},
@@ -17,7 +17,7 @@ export class AppComponent {
 
   // ];
 
-  // constructor(){
-  //   this.quotes = ['Make your life a masterpiece; imagine no limitations on what you can be, have or do.']
-  // }
+  constructor(){
+    this.quotes = ['Make your life a masterpiece; imagine no limitations on what you can be, have or do.']
+  }
 }
