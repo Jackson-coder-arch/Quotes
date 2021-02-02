@@ -16,17 +16,24 @@
           <div *ngIf='quote.showDescription'>
             <app-quote-detail  [quote]='quote' (isComplete) = 'deleteGoal($event,i)'></app-quote-detail>
           </div>
-          <button (click)="upVote(i)" >Like {{quote.upvote}}</button>
-          <button (click)="downVote(i)" >Dislike {{quote.downvote}}</button>
+          <i (click)="upVote(i)" class="far fa-thumbs-up my-4 ">Like {{quote.upvote}}</i>
+
+          <i (click)="downVote(i)" class="far fa-thumbs-down my-4 ml-3"> Dislike {{quote.downvote}}</i>
+
+          <!-- <button (click)="upVote(i)" >Like {{quote.upvote}}</button> -->
+          <!-- <button (click)="downVote(i)" >Dislike {{quote.downvote}}</button> -->
           <h2 *ngIf="quote === highestUpVote()" appHighUpvote><strong>Top Quote.</strong> </h2>
 
 
 
         </div>
-        <div class="col-md-6">
-          <app-quote-form></app-quote-form>
-        </div>
       </div>
+
+
+        <div class="col-md-6">
+          <app-quote-form (addQuote)="addNewQUote($event)"></app-quote-form>
+        </div>
+
     </div>
   </div>
 
