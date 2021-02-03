@@ -3,6 +3,7 @@
       <div class="card">
 
           <p>Posted {{ quote!.description }}</p>
+          <p>{{quote!.completeDate|date|uppercase}}</p>
           <p>Date{{quote?.completeDate|dateCount}}</p>
           <p>This quote was last posted in {{quote?.completeDate|dateCount}} days</p>
 
